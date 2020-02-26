@@ -1,7 +1,13 @@
 #include <SFML/Graphics.hpp>
 
+#include "SimonTTS.h"
+
 int main()
 {
+    SimonTTS tts;
+    tts.loadAToZFiles("Audio/Letters/a.wav", 'a');
+
+
     sf::RenderWindow window(sf::VideoMode(1280, 720), "SimonTTS");
     sf::CircleShape shape(100.f);
     shape.setFillColor(sf::Color::Green);

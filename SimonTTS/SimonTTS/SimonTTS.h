@@ -4,14 +4,15 @@
 #include "SFML/Audio.hpp"
 #include <memory>
 #include <unordered_map>
+#include <filesystem>
 
 class SimonTTS
 {
 public:
 	SimonTTS();
-	void loadAudioFile(const std::string& path, const char& id);
-	void loadAToZFiles(const char* path, char id);
-	void loadAudioFile(const std::string& path, const char& id, const unsigned int& gapBetweenSounds);
+	void loadAudioFile(std::string path, const char& id);
+	void loadAToZFiles(std::string path, char id);
+	void loadAudioFile(std::string path, const char& id, const unsigned int& gapBetweenSounds);
 	void play(std::string message);
 	void setVoicePitch(const float& pitch);
 
